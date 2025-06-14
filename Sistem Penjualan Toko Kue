@@ -30,3 +30,22 @@ void beliKue() {
 
     string kueDipilih = namaKue[pilihKue - 1];
     int harga = hargaKue[pilihKue - 1];
+
+// Pilih topping berdasarkan jenis kue
+    cout << "\nPilih topping untuk " << kueDipilih << ":\n";
+    if (kueDipilih == "Mille Crepes") {
+        cout << "1. Strawberry\n2. Coklat\nPilihan: ";
+        cin >> pilihTopping;
+        toppingStr = (pilihTopping == 1) ? "Strawberry" :
+                     (pilihTopping == 2) ? "Coklat" : "Tanpa topping";
+    } else if (kueDipilih == "Brownies") {
+        cout << "1. Keju\n2. Kacang\nPilihan: ";
+        cin >> pilihTopping;
+        toppingStr = (pilihTopping == 1) ? "Keju" :
+                     (pilihTopping == 2) ? "Kacang" : "Tanpa topping";
+    } else if (kueDipilih == "Cheesecake") {
+        cout << "1. Strawberry\n2. Karamel\nPilihan: ";
+        cin >> pilihTopping;
+        toppingStr = (pilihTopping == 1) ? "Strawberry" :
+                     (pilihTopping == 2) ? "Karamel" : "Tanpa topping";
+    }
