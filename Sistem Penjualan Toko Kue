@@ -11,3 +11,22 @@ void tampilkanKue() {
         cout << i + 1 << ". " << namaKue[i] << " - Rp" << hargaKue[i] << endl;
     }
 }
+void beliKue() {
+    string nama;
+    int pilihKue, pilihTopping;
+    string toppingStr = "Tanpa topping";  // Inisialisasi default topping
+
+    cout << "\nMasukkan nama Anda: ";
+    cin >> nama;
+
+    tampilkanKue();
+    cout << "Pilih nomor kue (1-3): ";
+    cin >> pilihKue;
+
+    if (pilihKue < 1 || pilihKue > 3) {
+        cout << "Pilihan tidak valid!\n";
+        return;
+    }
+
+    string kueDipilih = namaKue[pilihKue - 1];
+    int harga = hargaKue[pilihKue - 1];
