@@ -59,3 +59,24 @@ void beliKue() {
     cout << "Total  : Rp" << harga << endl;
     cout << "========================\n";
 }
+
+int main() {
+    int menu;
+    do {
+        cout << "\n=== MENU TOKO KUE ===\n";
+        cout << "1. Lihat Daftar Kue\n";
+        cout << "2. Beli Kue\n";
+        cout << "3. Keluar\n";
+        cout << "Pilih menu: ";
+        cin >> menu;
+
+        switch (menu) {
+            case 1: tampilkanKue(); break;
+            case 2: beliKue(); break;
+            case 3: cout << "Terima kasih!\n"; break;
+            default: cout << "Menu tidak valid!\n";
+        }
+    } while (menu != 3);
+
+    return 0;
+}
