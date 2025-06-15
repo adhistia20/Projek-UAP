@@ -11,6 +11,7 @@ void tampilkanKue() {
         cout << i + 1 << ". " << namaKue[i] << " - Rp" << hargaKue[i] << endl;
     }
 }
+
 void beliKue() {
     string nama;
     int pilihKue, pilihTopping;
@@ -49,3 +50,33 @@ void beliKue() {
         toppingStr = (pilihTopping == 1) ? "Strawberry" :
                      (pilihTopping == 2) ? "Karamel" : "Tanpa topping";
     }
+
+// Tampilkan struk
+    cout << "\n=== STRUK PEMBELIAN ===\n";
+    cout << "Nama   : " << nama << endl;
+    cout << "Kue    : " << kueDipilih << endl;
+    cout << "Topping: " << toppingStr << endl;
+    cout << "Total  : Rp" << harga << endl;
+    cout << "========================\n";
+}
+
+int main() {
+    int menu;
+    do {
+        cout << "\n=== MENU TOKO KUE ===\n";
+        cout << "1. Lihat Daftar Kue\n";
+        cout << "2. Beli Kue\n";
+        cout << "3. Keluar\n";
+        cout << "Pilih menu: ";
+        cin >> menu;
+
+        switch (menu) {
+            case 1: tampilkanKue(); break;
+            case 2: beliKue(); break;
+            case 3: cout << "Terima kasih!\n"; break;
+            default: cout << "Menu tidak valid!\n";
+        }
+    } while (menu != 3);
+
+    return 0;
+}
